@@ -2,27 +2,57 @@
 <div class="spinner" ng-show="loading">
     <img src="https://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" />
 </div>
+
+<div class="alert alert-primary">
+  USA Store
+</div>
+
 <div class="card-deck">
 
 
     <div ng-repeat="game in games">
 
-        <div class="card" style="width: 14rem;">
+
+        <div class="card" style="width: 14rem;" ng-if="game.US">
         <img src={{game.image}} class="card-img-top" alt={{game.name}} title={{game.name}}>
             <div class="card-body">
-              <h5 class="card-title">{{game.name}} - {{game.store}}</h5>
+              <h5 class="card-title">{{game.name}}</h5>
               <p class="card-text ">Price {{game.displayPrice}}</p>
               <p class="card-text text-white">Discount {{game.rewardDisplayPrice}}</p>
-              
-                
+
+
             </div>
         </div>
 
+
     </div>
 
-  
-  
-  
 </div>
 
+</br>
 
+<div class="alert alert-success">
+  UAE Store
+</div>
+
+<div class="card-deck">
+
+
+    <div ng-repeat="game in games">
+
+
+        <div class="card" style="width: 14rem;" ng-if="game.UAE">
+        <img src={{game.image}} class="card-img-top" alt={{game.name}} title={{game.name}}>
+            <div class="card-body">
+              <h5 class="card-title">{{game.name}}</h5>
+              <p class="card-text ">Price {{game.displayPrice}}</p>
+              <p class="card-text text-white">Discount {{game.rewardDisplayPrice}}</p>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
